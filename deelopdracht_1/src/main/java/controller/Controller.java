@@ -1,6 +1,5 @@
 package main.java.controller;
 
-import main.java.db.PersonRepository;
 import main.java.db.PersonRepositoryStub;
 
 import javax.servlet.ServletException;

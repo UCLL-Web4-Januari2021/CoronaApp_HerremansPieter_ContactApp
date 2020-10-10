@@ -1,12 +1,11 @@
 package main.java.db;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import main.java.domain.Person;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import main.java.domain.Person;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
 
 public class PersonRepositoryStub implements PersonRepository {
 

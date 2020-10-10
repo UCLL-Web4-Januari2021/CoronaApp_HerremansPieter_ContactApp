@@ -2,9 +2,6 @@ package main.java.controller;
 
 import main.java.db.PersonRepositoryStub;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ServiceConfigurationError;
 
 public class ControllerFactory {
