@@ -1,7 +1,7 @@
-package main.java.db;
+package db;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import main.java.domain.Person;
+import domain.Person;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

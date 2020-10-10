@@ -1,6 +1,6 @@
-package main.java.controller;
+package controller;
 
-import main.java.db.PersonRepositoryStub;
+import db.PersonRepositoryStub;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
