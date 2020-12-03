@@ -1,5 +1,7 @@
 package domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -12,8 +14,10 @@ public class Person {
     private String email;
     private String gsm;
     private String password;
-    public ArrayList<Person> friends;
     public boolean covid;
+    @JsonIgnore
+    public ArrayList<Person> friends;
+
 
     public Person(String email, String firstName, String lastname, String date, String room, String gsm, String password) {
         setDate(date);
