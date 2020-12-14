@@ -13,5 +13,6 @@ controller\addperson.class
 domain\Person.class
 controller\Register.class
 controller\Home.class
+controller\editperson.class
 controller\LogOut.class
 controller\search.class

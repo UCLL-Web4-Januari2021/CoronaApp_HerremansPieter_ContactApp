@@ -55,6 +55,12 @@ public class PersonRepositoryStub implements PersonRepository {
 
     @Override
     public ArrayList<Person> getAll() {
+        this.persons.sort(new Comparator<Person>() {
+            @Override
+            public int compare(Person lhs, Person rhs) {
+                return lhs.getFirstName().compareTo(rhs.getFirstName());
+            }
+        });
         return persons;
     }
 
@@ -90,3 +96,4 @@ public class PersonRepositoryStub implements PersonRepository {
         //not yet implemented
     }
 }
+

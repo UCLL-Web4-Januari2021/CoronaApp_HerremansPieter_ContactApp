@@ -7,7 +7,6 @@
     <meta charset="UTF-8">
     <title>Friends</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="js/Friends.js"></script>
 </head>
 <body>
 <header>
@@ -32,19 +31,19 @@
 </form>
 
 <!-- friend list -->
+<h2>Friends</h2>
 
+<c:forEach items="${user.getFriends()}" var="friend">
+    <c:choose>
+        <c:when test = "${friend.isCovid()}">
+            <p style="color:red"> <c:out value="${friend.getFirstName()}"/> </p>
+        </c:when>
+        <c:otherwise>
+            <p style="color:green"> <c:out value="${friend.getFirstName()}"/> </p>
+        </c:otherwise>
+    </c:choose>
 
-<table>
-    <thead>
-        <th><h2>Friends</h2></th>
-    </thead>
-    <tbody id="tbody">
-    <tr>
-        <td>dummy</td>
-    </tr>
-    </tbody>
-</table>
+</c:forEach>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>

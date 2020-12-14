@@ -21,6 +21,10 @@ public class Controller extends HttpServlet {
         processRequest(request, response);
     }
 
+    protected void doPut(HttpServletRequest request, HttpServletResponse response){
+        processRequest(request, response);
+    }
+
     private void processRequest(HttpServletRequest request, HttpServletResponse response){
         try{
             String command = request.getParameter("command");
