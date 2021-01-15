@@ -133,3 +133,5 @@ function mostfrequent(persons){
     console.log(item1, item2, item3);
     $('#most_common').html(a);
 }
+
+

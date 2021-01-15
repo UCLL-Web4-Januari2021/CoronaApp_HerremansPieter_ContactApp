@@ -16,6 +16,7 @@
     <p><a href="search.jsp">search</a></p>
     <p><a href="SignUp.jsp">Sign Up</a></p>
     <p><a href="covid-19.jsp">covid-19</a></p>
+    <p><a href="roomcount.jsp">roomcount</a></p>
     <c:choose>
         <c:when test="${not empty user}">
             <p><a href="friends.jsp">friends</a> </p>
@@ -115,6 +116,7 @@
     <p>dummy2</p>
     <p>dummy3</p>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>
