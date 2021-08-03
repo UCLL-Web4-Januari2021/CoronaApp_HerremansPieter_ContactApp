@@ -5,9 +5,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Tracing</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="js/Covid.js"></script>
+    <title>Search Page</title>
+    <script src="js/searchdate.js"></script>
 </head>
 <body>
 <header>
@@ -24,30 +24,31 @@
     </c:choose>
 </header>
 
-<h2>Contact Overview</h2>
+<h2>Search Page</h2>
+
+<form>
+    <label for="Date">Date:</label>
+    <input type="text" id="Date" name="Date"><br>
+
+    <input type="button" value="button" onclick="searchPersons()">
+</form>
+
 <div class="flex-container">
     <table>
         <thead>
-        <th>Name</th>
+        <th>First name</th>
+        <th>Last name</th>
         <th>Date</th>
+        <th>Room</th>
+        <th>Email</th>
+        <th>GSM</th>
         </thead>
-        <tbody id = "tbody">
+        <tbody id="tbody">
         <tr>
         </tr>
         </tbody>
     </table>
 </div>
 
-<form action="">
-    <label for="name">Name: </label>
-    <input type="text" id="name" name="name">
-    <br>
-
-    <label for="date">Date: </label>
-    <input type="text" id="date" name="date">
-    <br>
-
-    <input type="button" value="button" onclick="send()">
-</form>
 </body>
 </html>

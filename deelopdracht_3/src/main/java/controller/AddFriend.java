@@ -27,7 +27,8 @@ public class AddFriend extends RequestHandler{
         }
 
         if (friend == null){
-            throw new IllegalArgumentException("no friend found with this name");
+            request.getRequestDispatcher("friends.jsp").forward(request, response);
+            throw new IllegalArgumentException("no person found with this email");
         }
         //add person to friend list
         person.addfriend(friend);

@@ -14,9 +14,9 @@
     <h1>Contact Tracing @Campus Proximus</h1>
     <p><a href="index.jsp">home</a></p>
     <p><a href="search.jsp">search</a></p>
+    <p><a href="search-date.jsp">search-date</a></p>
     <p><a href="SignUp.jsp">Sign Up</a></p>
     <p><a href="covid-19.jsp">covid-19</a></p>
-    <p><a href="roomcount.jsp">roomcount</a></p>
     <c:choose>
         <c:when test="${not empty user}">
             <p><a href="friends.jsp">friends</a> </p>
@@ -26,6 +26,8 @@
 </header>
 
 <h2>Contact Overview</h2>
+
+<P id="count">Count: dummy</P>
 <div class="flex-container">
     <table>
         <thead>

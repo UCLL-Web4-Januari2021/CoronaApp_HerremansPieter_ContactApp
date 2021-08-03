@@ -55,12 +55,13 @@ public class PersonRepositoryStub implements PersonRepository {
 
     @Override
     public ArrayList<Person> getAll() {
-        this.persons.sort(new Comparator<Person>() {
+        //sorting not perfect, crashes sometimes
+        /*this.persons.sort(new Comparator<Person>()
             @Override
             public int compare(Person lhs, Person rhs) {
                 return lhs.getFirstName().compareTo(rhs.getFirstName());
             }
-        });
+        });*/
         return persons;
     }
 
@@ -75,6 +76,21 @@ public class PersonRepositoryStub implements PersonRepository {
         if (ret.isEmpty()) {
             throw new IllegalAccessException("No matches found.");
         } else {
+            return ret;
+        }
+    }
+
+    public ArrayList<Person> searchdate(String Date) throws IllegalAccessException {
+        ArrayList<Person> ret = new ArrayList<Person>();
+
+        for (Person p: persons) {
+            if (p.getDate().equals(Date)){
+                ret.add(p);
+            }
+        }
+        if(ret.isEmpty()){
+            throw new IllegalArgumentException("no matches found.");
+        }else{
             return ret;
         }
     }

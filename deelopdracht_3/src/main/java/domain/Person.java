@@ -114,7 +114,30 @@ public class Person {
         }
     }
 
+   @JsonIgnore
    public ArrayList<Person> getFriends() {
         return friends;
+   }
+
+   @JsonIgnore
+   public ArrayList<Person> getPositiveFriends(){
+       ArrayList<Person> ret = new ArrayList<>();
+       for (Person p: this.friends) {
+           if(p.isCovid()){
+               ret.add(p);
+           }
+       }
+       return ret;
+   }
+
+   @JsonIgnore
+   public ArrayList<Person> getNegativeFriends(){
+       ArrayList<Person> ret = new ArrayList<>();
+       for (Person p: this.friends) {
+           if(!p.isCovid()){
+                ret.add(p);
+            }
+        }
+        return ret;
     }
 }
