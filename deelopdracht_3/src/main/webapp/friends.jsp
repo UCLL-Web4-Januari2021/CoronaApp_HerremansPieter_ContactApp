@@ -33,7 +33,7 @@
 </form>
 
 <!-- friend list -->
-<h2>Friends</h2>
+<h3>friends list</h3>
 
 <c:forEach items="${user.getFriends()}" var="friend">
     <c:choose>
