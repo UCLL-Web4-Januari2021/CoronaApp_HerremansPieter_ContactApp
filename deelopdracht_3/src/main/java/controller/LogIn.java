@@ -1,7 +1,7 @@
 package controller;
 
-import domain.Person;
 import db.PersonRepositoryStub;
+import domain.Person;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

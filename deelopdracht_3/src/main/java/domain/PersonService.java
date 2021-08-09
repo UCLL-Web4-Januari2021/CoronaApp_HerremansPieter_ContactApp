@@ -18,7 +18,7 @@ public class PersonService {
 
     public void addPerson(Person person) throws IllegalAccessException {getPersonRepository().add(person);}
 
-    public void updatePersons(Person person){getPersonRepository().update(person);}
+    public void updatePerson(Person person){getPersonRepository().update(person);}
 
     public void deletePerson(String id){getPersonRepository().delete(id);}
 

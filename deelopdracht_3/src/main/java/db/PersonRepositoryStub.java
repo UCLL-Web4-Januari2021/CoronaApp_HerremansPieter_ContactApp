@@ -1,12 +1,9 @@
 package db;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import domain.Person;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import domain.Person;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
 
 public class PersonRepositoryStub implements PersonRepository {
 
@@ -47,6 +44,15 @@ public class PersonRepositoryStub implements PersonRepository {
     public Person get(String email) throws IllegalAccessException {
         for (Person p: persons) {
             if(p.getEmail().equals(email)){
+                return p;
+            }
+        }
+        throw new IllegalAccessException("No person found.");
+    }
+
+    public Person getfname(String fname) throws IllegalAccessException {
+        for (Person p: persons) {
+            if(p.getFirstName().equals(fname)){
                 return p;
             }
         }
@@ -109,7 +115,17 @@ public class PersonRepositoryStub implements PersonRepository {
 
     @Override
     public void update(Person person) {
-        //not yet implemented
+        try {
+            Person p = getfname(person.getFirstName());
+            p.setLastname(person.getLastname());
+            p.setDate(person.getDate());
+            p.setRoom(person.getRoom());
+            p.setEmail(person.getEmail());
+            p.setGsm(person.getGsm());
+            p.setPassword(person.getPassword());
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 }
 
