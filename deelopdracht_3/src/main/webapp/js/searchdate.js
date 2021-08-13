@@ -1,4 +1,4 @@
-let seArchdayPersonRequest = new XMLHttpRequest();
+let searchDayPersonRequest = new XMLHttpRequest();
 
 function searchPersons(){
     let Datetext = document.getElementById("Date").value;
@@ -6,16 +6,16 @@ function searchPersons(){
         "&date=" + encodeURIComponent(Datetext) +
         "&command=searchdate";
 
-    seArchdayPersonRequest.open("POST", "/Controller");
-    seArchdayPersonRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded' );
-    seArchdayPersonRequest.onreadystatechange = showPersons;
-    seArchdayPersonRequest.send(information)
+    searchDayPersonRequest.open("POST", "/Controller");
+    searchDayPersonRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded' );
+    searchDayPersonRequest.onreadystatechange = showPersons;
+    searchDayPersonRequest.send(information)
 }
 
 function showPersons(){
-    if (seArchdayPersonRequest.readyState === 4) {
-        if (seArchdayPersonRequest.status === 200) {
-            let persons = JSON.parse(seArchdayPersonRequest.responseText);
+    if (searchDayPersonRequest.readyState === 4) {
+        if (searchDayPersonRequest.status === 200) {
+            let persons = JSON.parse(searchDayPersonRequest.responseText);
             document.getElementById("tbody").innerHTML = "";
             for (let i = 0; i < persons.length; i++) {
                 let a = "<tr>" +
