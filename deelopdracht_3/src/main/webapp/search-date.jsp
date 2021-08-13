@@ -36,7 +36,7 @@
     <label for="Date">Date:</label>
     <input type="text" id="Date" name="Date" class="form-control"><br>
 
-    <input type="button" value="button" onclick="searchPersons()" class="btn btn-primary">
+    <input type="button" value="Search" onclick="searchPersons()" class="btn btn-primary">
 </form>
 
 <div class="flex-container">
